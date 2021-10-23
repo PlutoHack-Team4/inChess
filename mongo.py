@@ -2,7 +2,7 @@ import pymongo
 from pymongo import MongoClient
 
 # set up init cluster
-cluster = MongoClient("mongodb+srv://adminTyler:paWoodHJ9qohPLDs@cluster0.nce7s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+cluster = MongoClient("mongodb+srv://admin:<password>@cluster0.nce7s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 # select database
 db = cluster["inChest"]
 # select user collection
