@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p class="text-center">{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="text-center">
+    <form class="form-signin" action="#" method="post">
+        <img class="mb-4" src="{{ url_for('static', filename ='images/logo.png')}}" alt="" width="300" height="200">
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    
+        <div class="form-floating">
+          <input type="text" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput" >Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" name="pw" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword" >Password</label>
+        </div>
+    
+        <div class="checkbox mb-3">
+          <label style="">
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign In</button>
+        <p>No Account? <a href="/signup">Sign Up</a> here</p>
+        
+      </form>
+    </div>
+
+{% endblock %}

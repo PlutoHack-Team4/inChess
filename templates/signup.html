@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Register Page{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <form class="form-signin" action="#" method="post">
+        <img class="mb-4" src="{{ url_for('static', filename ='images/logo.png')}}" alt="" width="300" height="200">
+        <h1 class="h3 mb-3 fw-normal">Create an account</h1>
+    
+        <div class="form-floating">
+          <input type="text" name="fname" class="form-control" id="firstname" placeholder="First name">
+          <label for="firstname">First Name</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" name="lname" class="form-control" id="lastname" placeholder="Last name">
+          <label for="lastname">Last Name</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword" style="">Password</label>
+        </div>
+        <div class="form-floating">
+          <select id="select-level" name="comp_select" class="selectpicker form-control">
+            <option value="Easy">Beginner</option>
+            <option value="Medium">Intermediate</option>
+            <option value="Hard">Expert</option>
+          </select>          
+          <label for="select-level" style="">Choose your level</label>
+        </div>
+
+        <div class="pt-4">
+          <button class="w-100 btn btn-lg btn-primary" type="submit" style="">Sign Up</button>
+
+        </div>
+        <p>Have Account? <a href="/login">Sign in</a> here</p>
+
+    </form>
+</div>
+
+{% endblock %}
