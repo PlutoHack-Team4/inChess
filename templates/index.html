@@ -1,6 +1,107 @@
 <!-- if want to add to base.html -->
 <!-- use block -->
+
 {% extends "base.html" %} 
 {% block name %}
-<h1>Hello Tyler!</h1>
+<!DOCTYPE html>
+
+<html>
+<style>
+li {
+    list-style-type:none;
+    margin-left:10px;
+  }
+  .bod {
+    text-align:center;
+    font-size:65px;
+    color:black;
+    font-family:monospace;
+    background-color:paleturquoise;
+    position:relative;
+    height:60px;
+    width:1200px;
+    padding:0;
+    margin:0;
+    z-index:1;
+  }
+  .bod1 {
+    position:relative;
+    left:210px;
+    top:70px;
+    width:800px;
+    height:1200px;
+    color:black;
+    font-size:16px;
+    font-family:monospace;
+  }
+  .bod2 {
+    postition:absolute;
+    width:500px;
+    height:300px;
+    top:auto;
+    left:auto;
+  }
+  .bod3 {
+    text-align:center;
+    font-size:14px;
+    position:absolute;
+    top:38%;
+    right:-70px;
+    width:360px;
+    height:460px;
+  }
+  .foot {
+    text-align:center;
+    position:relative;
+    bottom:-35px;
+  }
+  #pic1 {
+    position:absolute;
+    top:0px;
+    right:-70px;
+    padding:5px;
+    padding-left: 10px;
+  }
+  #pic2 {
+    left: -100px;
+    width:500px;
+  }
+  #pic3 {
+  left: 600;
+  width: 150;
+  position:absolute;
+  top:70px;
+  padding-left: 70px;
+}
+  .leaderboard {
+    position:absolute;
+    top:70px;
+  }
+  .ref3 {
+    text-align:right;
+    position:absolute;
+    bottom:47px;
+    right:0;
+  }
+  .ind {
+    margin-left:30px;
+    font-size: 35px;
+  }
+</style>
+<body style="background-color:paleturquoise;">
+  <div class=bod>inChess Broward</div>
+  <div class=bod1>
+    <div class=bod2>
+      <font class="ind"> We created this app to bring the community together in games of chess. Find a location near you, schedule a game, make new friends, and grow your skills. Also keep track of the winners in our leaderboard.</font>  
+      <div id=pic1><img src="{{ url_for('static', filename ='images/logo.png')}}" alt="" width="400" height="400"></div>
+      <img src="{{ url_for('static', filename ='images/lifesizechess.jpeg')}}"  id=pic2></div>
+    <div class=bod3> 
+      <font size=25>
+        <font color=grey>"</font><font  style="border-bottom-style:solid;">LeaderBoard</font><font color=grey>"</font>
+      </font>
+      <div id=pic3><img src="{{ url_for('static', filename ='images/leaderboard.png')}}" alt"" width="225" height="435"></div>
+      <div class=Leaderboard>
+    </div>
+  </div>
+</body>
 {% endblock %}
